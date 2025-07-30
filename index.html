@@ -1,11 +1,412 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Coming Soon</title>
-</head>
-<body>
-  <h1>Coming Soon...</h1>
-  <p>This GitHub Pages site will be updated shortly.</p>
-</body>
+<html lang="en">
+  <head>
+    <title>AgroBehch</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://kit.fontawesome.com/f8ddf9854a.js" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <meta name="description"
+          content="AnimalClue: Recognizing Animals by their Traces">
+    <meta name="keywords" content="MMMU, LMM, LMM Evaluation, Vision Language Model, Large Language Model, Large Multimodal Model, artificial intelligence, AI, AGI, artificial general intelligence">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AgroBehch: Vision-Language Model Benchmark in Agriculture</title>
+
+    <link rel="icon" href="./static/images/agro_icon.png">
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <script src="https://kit.fontawesome.com/fff5b27ec1.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/eaf1856e6f.js" crossorigin="anonymous"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+  </head>
+  <body>
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-menu">
+        <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              More Research
+            </a>
+            <div class="navbar-dropdown">
+              <a class="navbar-item" href="https://dahlian00.github.io/PetFacePage/">
+                <b>PetFace</b> <span style="font-size:18px; display: inline; margin-left: 5px;">🔥</span>
+              </a>
+              <a class="navbar-item" href="https://dahlian00.github.io/SegRCDBPage/">
+                SegRCDB
+              </a>
+            
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+
+    <!-- AFTER（修正後） -->
+    <section class="hero">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-1 publication-title is-bold">
+          <img src="static/images/agro_icon.png" style="width:1em; vertical-align: middle" alt="Logo"/>
+          <span class="mmmu" style="vertical-align: middle">AgroBench</span>
+        </h1>
+        <h2 class="subtitle is-3 publication-subtitle">
+          AgroBehch: Vision-Language Model Benchmark in Agriculture
+        </h2>
+        <h3 class="subtitle is-3 publication-subtitle">
+          ICCV 2025 
+        </h3>
+        <div class="is-size-5 publication-authors">
+          <br>
+          <span class="author-block">
+            <a href="https://sites.google.com/view/risashinoda/home" style="text-decoration: none; color: inherit;">Risa Shinoda<sup>1,2,4</sup></a>,
+          </span>
+          <span class="author-block">
+            <a href="https://mmai.tech/" style="text-decoration: none; color: inherit;">Nakamasa Inoue<sup>3,4</sup></a>,
+          </span>
+          <span class="author-block">
+            <a href="https://hirokatsukataoka.net/" style="text-decoration: none; color: inherit;">Hirokatsu Kataoka<sup>4,5</sup></a>
+          </span>
+          <span class="author-block">
+            <a href="http://onishi-lab.jp/index-e.html" style="text-decoration: none; color: inherit;">Masaki Onishi<sup>4</sup></a>,
+          </span>
+          <span class="author-block">
+            <a href="https://yoshitakaushiku.net/index.html" style="text-decoration: none; color: inherit;">Yoshitaka Ushiku<sup>6</sup></a>,
+          </span>
+        </div>
+        <div class="is-size-6 has-text-centered mt-3">
+          <p><sup>1</sup>The University of Osaka <sup>2</sup>Kyoto University <sup>3</sup>Tokyo Institute of Technology</p>
+          <p><sup>4</sup>National Institute of Advanced Industrial Science and Technology (AIST) <sup>5</sup>Visual Geometry Group, University of Oxford</p><sup>6</sup>OMRON SINIC X</p>
+        </div>
+      </div>
+      <div class="column has-text-centered">
+        <div class="publication-links">
+          <span class="link-block">
+            <a href="http://arxiv.org/abs/2507.20519" class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                <i class="fas fa-file-pdf"></i>
+              </span>
+              <span>arXiv</span>
+            </a>
+          </span>
+          <span class="link-block">
+            <a href="https://huggingface.co/datasets/risashinoda/AgroBench" class="external-link button is-normal is-rounded is-dark">
+              <span class="icon" style="font-size:18px">🤗</span>
+              <span>Dataset</span>
+            </a>
+          </span>
+          <span class="link-block">
+            <a href="https://github.com/dahlian00/AgroBench/tree/main" class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                <i class="fab fa-github"></i>
+              </span>
+              <span>Code</span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="hero teaser">
+      <div class="container is-max-desktop has-text-centered">
+        <img src="static/images/agrobench_overview.png" alt="geometric reasoning",style="margin-top: 20rem;">
+        <p>We present AgroBench <strong>Agro</strong>nomist AI <strong>Bench</strong>mark designed to comprehensively evaluate 682 disease categories across 203 agricultural crop types for 7 vision-language question-answer tasks. In the era of larger-scale vision-language models (VLMs), our \datasetname is obviously non-trivial in terms of many more crop and disease categories with all expert annotations for establishing QA benchmarks in the agricultural domain.
+        </p>
+      </div>
+    </section> 
+
+    <section class="section">
+      <div class="container" style="margin-bottom: 2vh;">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">🔔News</h2>
+            <div class="content has-text-justified">
+              <p>
+                <!-- <b>🔥[2024-09-05] Introducing <a href="https://arxiv.org/abs/2409.02813">MMMU-Pro</a>, a robust version of MMMU benchmark for multimodal AI evaluation! 🚀</b> -->
+              </p>
+          </div>
+            <h2 class="title is-3">Introduction</h2>
+            <div class="content has-text-justified">
+              <p>
+                Here, we introduce AgroBench(Agronomist AI Benchmark), a benchmark for evaluating VLM models across seven agricultural topics, covering key areas in agricultural engineering and relevant to real-world farming.
+                Unlike recent agricultural VLM benchmarks, AgroBench is annotated by expert agronomists.
+                Our AgroBench covers a state-of-the-art range of categories, including 203 crop categories and 682 disease categories, to thoroughly evaluate VLM capabilities.
+                In our evaluation on AgroBench, we reveal that VLMs have room for improvement in fine-grained identification tasks. Notably, in weed identification, most open-source VLMs perform close to random. With our wide range of topics and expert-annotated categories, we analyze the types of errors made by VLMs and suggest potential pathways for future VLM development. 
+              </p>
+            </div>
+          </div>
+        </div>
+    
+    </div>
+    </section>
+
+    <!-- DATASET SECTION -->
+    <!-- <section class="hero is-light is-small">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-1 mmmu">
+          <img src="static/images/agro_icon.png" alt="Logo" class="mmmu-logo"/>
+          <span class="mmmu">AnimalClue</span>
+        </h1>
+      </div>
+    </section> -->
+    <section class="hero is-light is-small">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-1 mmmu">
+          <img src="static/images/agro_icon.png" alt="Logo" class="mmmu-logo"/>
+          <span class="mmmu">AgroBench</span>
+        </h1>
+      </div>
+    </section>
+    
+    
+
+
+    <section class="section">
+      <div class="container">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Overview</h2>
+            <div class="content has-text-justified">
+              <img src="static/images/labels.png" alt="algebraic reasoning" class="center">
+              <br>
+              <p>
+                Examples of labeled images for DID, PID, and WID tasks.
+                Our dataset includes 682 crop-disease pairs, 134 pest categories, and 108 weed categories. We prioritized collecting images from real farm settings.
+
+            </div>
+          </div>
+        </div>
+    
+
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Seven benchmark tasks in AgroBench</h2>
+            <div class="content has-text-justified">
+              <!-- <p>
+                AgroBench includes multiple topics with a diverse range of categories. The total accuracy is calculated by the average of each task to mitigate the difference in QAs.
+              </p> -->
+              <div class="content has-text-centered">
+                <img src="static/images/pie_chart.png" alt="algebraic reasoning" class="center" style="width: 50%;">
+                <p>
+                  AgroBench includes multiple topics with a diverse range of categories. The total accuracy is calculated by the average of each task to mitigate the difference in QAs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Example Annotations</h2>
+            <div class="content has-text-justified">
+              <div class="content has-text-centered">
+                <img src="static/images/qa_sample.png" alt="algebraic reasoning" class="center">
+                <p> (a) and (b) Crop management QA types for white asparagus and asparagus, respectively.
+                  Their difference in the harvest timing affects the answer's difference correctly. (c) and (d) Disease management QA types for the alfalfa bacterial leaf spot with the initial and severe symptoms, respectively. Based on the severity of the symptoms, the annotator changes the answer.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- RESULTS SECTION -->
+    <section class="hero is-light is-small">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-1 mmmu">Experiment Results</h1>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <!-------------------------------------------------------------------- RESULTS SECTION -------------------------------------------------------------------->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Main Results</h2>
+            <div class="content has-text-justified">
+              <div class="content has-text-centered">
+                <img src="static/images/main_result.png" alt="algebraic reasoning" class="center">
+                <p> We provide results for Random Choice, Human Validation, four closed-source VLMs, and open-source VLMs. Human validation was conducted by 28 people on a subset of 80 samples per task as a reference.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Chain of Thouht</h2>
+            <div class="content has-text-justified">
+              <div class="content has-text-centered">
+                <img src="static/images/cot.png" alt="algebraic reasoning" class="center">
+                <p> Baseline indicates results without CoT. In the one-shot, two-shot, and three-shot settings, we provide one, two, and three CoT examples per task, respectively, to guide the model.DID.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+        <!-------------------------------------------------------------------- Error Example  -------------------------------------------------------------------->
+        <div class="columns is-centered m-6">
+          <div class="column is-full has-text-centered content">
+            <h2 class="title is-3" id="examples">Error Examples</h2>
+            <div class="carousel results-carousel">
+              <div class="box m-5">
+                <div class="content has-text-centered">
+                  <img src="static/images/error/error1.png" alt="grade-lv" width="60%"/>
+                </div>
+              </div>
+              <div class="box m-5">
+                <div class="content has-text-centered">
+                  <img src="static/images/error/error2.png" alt="grade-lv" width="60%"/>
+                </div>
+              </div>
+              <div class="box m-5">
+                <div class="content has-text-centered">
+                  <img src="static/images/error/error3.png" alt="grade-lv" width="60%"/>
+                </div>
+              </div>
+              <div class="box m-5">
+                <div class="content has-text-centered">
+                  <img src="static/images/error/error4.png" alt="grade-lv" width="60%"/>
+                </div>
+              </div>
+              <div class="box m-5">
+                <div class="content has-text-centered">
+                  <img src="static/images/error/error5.png" alt="grade-lv" width="60%"/>
+                </div>
+              </div>
+              <div class="box m-5">
+                <div class="content has-text-centered">
+                  <img src="static/images/error/error6.png" alt="grade-lv" width="60%"/>
+                </div>
+              </div>
+              <div class="box m-5">
+                <div class="content has-text-centered">
+                  <img src="static/images/error/error7.png" alt="grade-lv" width="60%"/>
+                </div>
+              </div>
+              <!-- <div class="box m-5">
+                <div class="content has-text-centered">
+                  <img src="static/images/error/14.png" alt="grade-lv" width="60%"/>
+                </div>
+              </div> -->
+
+              </div>
+            </div>
+          </div>
+        </div>
+            <!-- <br>
+            <!-- <div class="model-labels-container">
+              <span class="leaderboard-label human_expert">Human Expert</span>
+              <span class="leaderboard-label open_source">Open-Source</span>
+              <span class="leaderboard-label proprietary">Proprietary</span>
+            </div>
+            <br>
+            <div class="content has-text-centered">
+              <p>
+                Click on MMMU-Pro, MMMU (Val) or MMMU (Test) to expand detailed results.
+              </p>
+            </div>
+            <div class="leaderboard-container">
+              <div class="content has-text-right is-size-7 has-text-grey">
+                <p>Last updated: 07/25/2025</p>
+              </div>
+              <div class="table-wrapper">
+                <table id="mmmu-table">
+                  <thead>
+                    <tr>
+                      <th colspan="3" class="reset-cell clickable" style="text-align: center;">Reset</th>
+                      <th class="pro-details-cell clickable" colspan="1">MMMU-Pro</th>
+                      <th class="val-details-cell clickable" colspan="1">MMMU(Val)</th>
+                      <th class="test-details-cell clickable" colspan="1">MMMU(Test)</th>
+                    </tr>
+                    <tr>
+                      <th class="sortable clickable" data-sort="string">Name</th>
+                      <th class="clickable" data-sort="string">Size</th>
+                      <th class="sortable clickable" data-sort="date">Date</th>
+                      <th class="sortable clickable pro-overall" data-sort="number">Overall</th>
+                      <th class="hidden pro-details sortable clickable" data-sort="number">Vision</th>
+                      <th class="hidden pro-details sortable clickable" data-sort="number">Standard</th>
+                      <th class="sortable clickable val-overall" data-sort="number">Overall</th>
+                      <th class="hidden val-details sortable clickable" data-sort="number">Art & Design</th>
+                      <th class="hidden val-details sortable clickable" data-sort="number">Business</th>
+                      <th class="hidden val-details sortable clickable" data-sort="number">Science</th>
+                      <th class="hidden val-details sortable clickable" data-sort="number">Health & Medicine</th>
+                      <th class="hidden val-details sortable clickable" data-sort="number">Human. & Social Sci.</th>
+                      <th class="hidden val-details sortable clickable" data-sort="number">Tech & Eng.</th>
+                      <th class="sortable clickable test-overall" data-sort="number">Overall</th>
+                      <th class="hidden test-details sortable clickable" data-sort="number">Art & Design</th>
+                      <th class="hidden test-details sortable clickable" data-sort="number">Business</th>
+                      <th class="hidden test-details sortable clickable" data-sort="number">Science</th>
+                      <th class="hidden test-details sortable clickable" data-sort="number">Health & Medicine</th>
+                      <th class="hidden test-details sortable clickable" data-sort="number">Human. & Social Sci.</th>
+                      <th class="hidden test-details sortable clickable" data-sort="number">Tech & Eng.</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Table body will be populated dynamically -->
+                  <!-- </tbody>
+                </table> -->
+                <!-- <p class="test-desc"> Overall results of different models on the MMMU leaderboard. The best-performing model in each category is <b>in-bold</b>, and the second best is <u>underlined</u>. *: results provided by the authors.</p>
+              </div> -->
+            <!-- </div> -->
+          <!-- </div>
+        </div>
+        <!-------------------------------------------------------------------- Image Type SECTION -------------------------------------------------------------------->
+        <!-- <div class="columns is-centered m-6"> -->
+        
+      <!-------------------------------------------------------------------- Single VS Multiple image SECTION -------------------------------------------------------------------->
+
+
+    </section>
+
+    <!-- @PAN TODO: bibtex -->
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title is-3 has-text-centered">BibTeX</h2>
+        <pre><code>
+          @article{shinoda2025agrobenchvisionlanguagemodelbenchmark,
+            title={AgroBench: Vision-Language Model Benchmark in Agriculture}, 
+            author={Risa Shinoda and Nakamasa Inoue and Hirokatsu Kataoka and Masaki Onishi and Yoshitaka Ushiku},
+            year={2025},
+            eprint={2507.20519},
+            archivePrefix={arXiv},
+            primaryClass={cs.CV},
+            url={https://arxiv.org/abs/2507.20519}, 
+      }
+    </code></pre>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is website adapted from <a href="https://nerfies.github.io/">Nerfies</a> and <a href="https://mathvista.github.io/">MathVista</a>, licensed under a <a rel="license"
+                                                  href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </body>
 </html>
